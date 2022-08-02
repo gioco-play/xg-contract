@@ -45,5 +45,23 @@ interface XGServiceInterface {
      * @return mixed
      */
     function betLogGrabberAll(int $pastMinutes);
+
+    /**
+     * 營商帳號轉換為遊戲商帳號
+     * @param string $opCode
+     * @param array $vendor
+     * @param string $memberCode
+     * @return mixed
+     */
+    function accountToVendor(string $opCode, array $vendor, string $memberCode);
+
+    /**
+     * 遊戲商帳號轉換為營商帳號
+     * @param string $opCode
+     * @param array $vendor
+     * @param string $vendorAccount
+     * @return mixed
+     */
+    function accountToOperator(string $opCode, array $vendor, string $vendorAccount);
 }
 
